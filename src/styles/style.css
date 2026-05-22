@@ -61,8 +61,8 @@ h2 {
 .cities__grid-item,
 .nature__grid-item,
 .people__grid-item {
-  min-height: 370px;
-  min-width: 370px;
+  /* min-height: 370px; */
+  /* min-width: 370px; */
   border-radius: 20px;
   padding: 20px;
 
@@ -81,6 +81,7 @@ h2 {
 }
 
 .cities__grid-container {
+  height: 1170px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr); /* grid-template-rows / grid-template-columns values */
   gap: 30px;
@@ -161,6 +162,8 @@ h2 {
 
 /* =================NATURE SECTION===================== */
 .nature__grid-container {
+  height: 1570px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -213,6 +216,8 @@ h2 {
 
 /* =================PEOPLE SECTION===================== */
 .people__grid-container {
+  height: 1970px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
