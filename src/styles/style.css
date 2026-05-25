@@ -68,16 +68,18 @@ h2 {
 
   background-image:
     linear-gradient(
-      rgba(187, 186, 192, 0.26),
-      rgba(91, 91, 91, 0.45),
-      rgba(36, 31, 36, 1)
+      360deg,
+      #241f24 0%,
+      rgba(91, 91, 91, 0.45) 34.11%,
+      rgba(187, 186, 192, 0.26) 62.5%
     ),
     var(--bg-image);
 
   background-size: cover;
-  background-position: center;
 
-  transition: all 0.1s ease;
+  transition:
+    all 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
 .cities__grid-container {
@@ -143,15 +145,12 @@ h2 {
   justify-content: center;
   align-items: center;
 
-  /* display: none; */
-}
-
-.icon-wrapper-1 {
   background-color: #e0e0e0;
-}
 
-.icon-wrapper-2 {
-  background-color: #e0e0e080;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.5s ease;
 }
 
 .icon-wrapper-1 > img,
@@ -294,10 +293,34 @@ h2 {
   --bg-image: url(../images/people/image-10.png);
 }
 
-/* =================HOVER EFFECT=============== */
+/* =================HOVER EFFECTS=============== */
 .cities__grid-item:hover,
 .nature__grid-item:hover,
 .people__grid-item:hover {
   cursor: pointer;
-  background-image: var(--bg-image);
+  background:
+    linear-gradient(
+      0deg,
+      #241f24 1.04%,
+      rgba(91, 91, 91, 0.26) 6.99%,
+      rgba(187, 186, 192, 0) 12.29%
+    ),
+    var(--bg-image);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+  background-size: 110%;
+}
+
+.cities__grid-item:hover .icon-wrapper-1,
+.cities__grid-item:hover .icon-wrapper-2,
+.nature__grid-item:hover .icon-wrapper-1,
+.nature__grid-item:hover .icon-wrapper-2,
+.people__grid-item:hover .icon-wrapper-1,
+.people__grid-item:hover .icon-wrapper-2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.icon-wrapper-1:hover,
+.icon-wrapper-2:hover {
+  background: rgba(224, 224, 224, 0.5);
 }
